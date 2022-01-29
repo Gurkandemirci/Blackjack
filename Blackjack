@@ -1,0 +1,219 @@
+#include <stdio.h>
+#include <stdlib.h>  
+#include <conio.h>
+#include <time.h>                              	/////  Blackjack  Oyunu
+#include <locale.h> 
+#include <time.h>
+#include <windows.h>
+
+int sayi1Blackjack,sayi2Blackjack,toplamBlackjack=0,sonuc1Blackjack,sonuc2Blackjack,secimBlackjack;
+int ascounter=4,bircounter=4,ikicounter=4,uccounter=4,dortcounter=4,bescounter=4,alticounter=4,yedicounter=4,sekizcounter=4,dokuzcounter=4,oncounter=16;
+int kartisteme(){
+	setlocale(LC_ALL, "Turkish");
+//////////////// KART ISTEME ///////////////
+	printf("\nKart istiyorsanız 1'e basın. İstemiyorsanız 2'ye basın\n\n\n");
+	scanf("%d",&secimBlackjack);
+//////////////// YANLIS SAYI ///////////////
+	while (secimBlackjack<1||secimBlackjack>2){
+		printf("Yanlış numara girdiniz.Lütfen tekrar deneyiniz:");
+		scanf("%d",&secimBlackjack);
+	}
+		if(secimBlackjack==1) {
+			sayi1Blackjack=1+rand()%10;
+			toplamBlackjack+=sayi1Blackjack;
+			printf("\n\n\tToplam=%d",toplamBlackjack);
+			if(toplamBlackjack>21){
+				printf("\n\n\t***Kaybettiniz***");
+				exit(0);
+			}
+			kartisteme();
+		}
+/////////////////////////////4 TÜR KARTIN BITIM KONTROLÜ////////////////////////////////////
+			if (sayi1Blackjack==1)
+			ascounter--;
+				if (ascounter==0){
+					sayi1Blackjack=1+rand()%10;
+					while(sayi1Blackjack=1) sayi1Blackjack=1+rand()%10;
+				}
+			 else if (sayi1Blackjack==2)
+			ascounter--;
+				if (ascounter==0){
+					sayi1Blackjack=1+rand()%10;
+					while(sayi1Blackjack=2) sayi1Blackjack=1+rand()%10;
+				}
+			else if (sayi1Blackjack==3)
+			ascounter--;
+				if (ascounter==0){
+					sayi1Blackjack=1+rand()%10;
+					while(sayi1Blackjack=3) sayi1Blackjack=1+rand()%10;
+				}
+			else if (sayi1Blackjack==4)
+			ascounter--;
+				if (ascounter==0) {
+					sayi1Blackjack=1+rand()%10;
+					while(sayi1Blackjack=4) sayi1Blackjack=1+rand()%10;
+				}
+			else if (sayi1Blackjack==5)
+			ascounter--;
+				if (ascounter==0) {
+					sayi1Blackjack=1+rand()%10;
+					while(sayi1Blackjack=5) sayi1Blackjack=1+rand()%10;
+				}
+			else if (sayi1Blackjack==6)
+			ascounter--;
+				if (ascounter==0) {
+					sayi1Blackjack=1+rand()%10;
+					while(sayi1Blackjack=6) sayi1Blackjack=1+rand()%10;
+				}
+			else if (sayi1Blackjack==7)
+			ascounter--;
+				if (ascounter==0) {
+					sayi1Blackjack=1+rand()%10;
+					while(sayi1Blackjack=7) sayi1Blackjack=1+rand()%10;
+				}
+			else if (sayi1Blackjack==8)
+			ascounter--;
+				if (ascounter==0) {
+					sayi1Blackjack=1+rand()%10;
+					while(sayi1Blackjack=8) sayi1Blackjack=1+rand()%10;
+				}
+			else if (sayi1Blackjack==9)
+			ascounter--;
+				if (ascounter==0) {
+					sayi1Blackjack=1+rand()%10;
+					while(sayi1Blackjack=9) sayi1Blackjack=1+rand()%10;
+				}
+			else if (sayi1Blackjack==10)
+			ascounter--;
+				if (ascounter==0) {
+					sayi1Blackjack=1+rand()%10;
+					while(sayi1Blackjack=10) sayi1Blackjack=1+rand()%10;
+				}
+		
+	}
+int main(){
+srand (time(NULL));
+setlocale(LC_ALL, "Turkish");
+printf("\n\t\t\t\t****Dünyanın en iyi kumar oyununa hoşgeldiniz****\n\nSizin sıranız:\n");
+
+sayi1Blackjack=1+rand()%10;
+sayi2Blackjack=1+rand()%10;
+toplamBlackjack=sayi1Blackjack+sayi2Blackjack;
+{
+
+if(sayi1Blackjack==1||sayi2Blackjack==1) bircounter--;
+else if(sayi1Blackjack==1&&sayi2Blackjack==1) bircounter=ascounter-2;
+
+if (sayi1Blackjack==2||sayi2Blackjack==2) ikicounter--;
+else if(sayi1Blackjack==2&&sayi2Blackjack==2) ikicounter=ascounter-2;
+
+if (sayi1Blackjack==3||sayi2Blackjack==3) uccounter--;
+else if(sayi1Blackjack==3&&sayi2Blackjack==3) uccounter=ascounter-2;
+
+if (sayi1Blackjack==4||sayi2Blackjack==4) dortcounter--;
+else if(sayi1Blackjack==4&&sayi2Blackjack==4) dortcounter=ascounter-2;
+
+if (sayi1Blackjack==5||sayi2Blackjack==5) bescounter--;
+else if(sayi1Blackjack==5&&sayi2Blackjack==5) bescounter=bescounter-2;
+
+if (sayi1Blackjack==6||sayi2Blackjack==6) alticounter--;
+else if(sayi1Blackjack==6&&sayi2Blackjack==6) alticounter=alticounter-2;
+
+if (sayi1Blackjack==7||sayi2Blackjack==7) yedicounter--;
+else if(sayi1Blackjack==7&&sayi2Blackjack==7) yedicounter=yedicounter-2;
+
+if (sayi1Blackjack==8||sayi2Blackjack==8) sekizcounter--;
+else if(sayi1Blackjack==8&&sayi2Blackjack==8) sekizcounter=sekizcounter-2;
+
+if (sayi1Blackjack==9||sayi2Blackjack==9) dokuzcounter--;
+else if(sayi1Blackjack==9&&sayi2Blackjack==9) dokuzcounter=dokuzcounter-2;
+
+if (sayi1Blackjack==10||sayi2Blackjack==10) oncounter--;
+else if(sayi1Blackjack==10&&sayi2Blackjack==10) oncounter=oncounter-2;
+}
+
+
+printf("\n1.Kart değeri=%d\n2.Kart değeri=%d\nToplam=%d",sayi1Blackjack,sayi2Blackjack,toplamBlackjack);
+///////////////// BIRINCI KULLANICININ SIRASI///////////////////////////////////
+	if (sayi1Blackjack==1&&sayi2Blackjack==10){// BLACKJACK
+		printf("\n\n\t***BLACKJACK***\t\tKazandiniz");
+		return 0;
+	if (sayi1Blackjack==10&&sayi2Blackjack==1)
+		printf("\n\n\t***BLACKJACK***\t\tKazandiniz");
+		return 0;
+    	} 
+    	kartisteme();
+    	printf("\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\tSizin Skorunuz=%d\t\tBankanın sırası\n\n\n\n\n\n\n\n",toplamBlackjack);
+		sonuc1Blackjack=toplamBlackjack;
+/////////////////// BANKANIN SIRASI///////////////////////////////////
+sayi1Blackjack=1+rand()%10;
+sayi2Blackjack=1+rand()%10;
+toplamBlackjack=sayi1Blackjack+sayi2Blackjack;
+
+{
+
+if(sayi1Blackjack==1||sayi2Blackjack==1) bircounter--;
+else if(sayi1Blackjack==1&&sayi2Blackjack==1) bircounter=ascounter-2;
+
+if (sayi1Blackjack==2||sayi2Blackjack==2) ikicounter--;
+else if(sayi1Blackjack==2&&sayi2Blackjack==2) ikicounter=ascounter-2;
+
+if (sayi1Blackjack==3||sayi2Blackjack==3) uccounter--;
+else if(sayi1Blackjack==3&&sayi2Blackjack==3) uccounter=ascounter-2;
+
+if (sayi1Blackjack==4||sayi2Blackjack==4) dortcounter--;
+else if(sayi1Blackjack==4&&sayi2Blackjack==4) dortcounter=ascounter-2;
+
+if (sayi1Blackjack==5||sayi2Blackjack==5) bescounter--;
+else if(sayi1Blackjack==5&&sayi2Blackjack==5) bescounter=bescounter-2;
+
+if (sayi1Blackjack==6||sayi2Blackjack==6) alticounter--;
+else if(sayi1Blackjack==6&&sayi2Blackjack==6) alticounter=alticounter-2;
+
+if (sayi1Blackjack==7||sayi2Blackjack==7) yedicounter--;
+else if(sayi1Blackjack==7&&sayi2Blackjack==7) yedicounter=yedicounter-2;
+
+if (sayi1Blackjack==8||sayi2Blackjack==8) sekizcounter--;
+else if(sayi1Blackjack==8&&sayi2Blackjack==8) sekizcounter=sekizcounter-2;
+
+if (sayi1Blackjack==9||sayi2Blackjack==9) dokuzcounter--;
+else if(sayi1Blackjack==9&&sayi2Blackjack==9) dokuzcounter=dokuzcounter-2;
+
+if (sayi1Blackjack==10||sayi2Blackjack==10) oncounter--;
+else if(sayi1Blackjack==10&&sayi2Blackjack==10) oncounter=oncounter-2;
+}
+	
+	printf("\n1.Kart değeri=%d\n2.Kart değeri=%d\nToplam=%d",sayi1Blackjack,sayi2Blackjack,toplamBlackjack);
+		//   	BLACKJACK
+		if (sayi1Blackjack==1&&sayi2Blackjack==10){
+			printf("\n\n\t***BLACKJACK***\t\tBanka Blackjack yaptı.Kaybettiniz");
+			exit(0);
+		}
+		if (sayi1Blackjack==10&&sayi2Blackjack==1){
+		printf("\n\n\t***BLACKJACK***\t\tBanka Blackjack yaptı.Kaybettiniz");
+		exit(0);
+    	} 
+    	while (sonuc1Blackjack>=toplamBlackjack){
+    		sayi1Blackjack=1+rand()%10;
+			toplamBlackjack+=sayi1Blackjack;
+			printf("\n\nÇekilen kart=%d",sayi1Blackjack);
+			printf("\nToplam=%d",toplamBlackjack);
+		}
+		sonuc2Blackjack=toplamBlackjack;
+    	if(toplamBlackjack>21){
+    		printf("\n\tBanka 21'i geçti\n\t***Kazandınız***\n\n\n\n\n");
+		}
+    	else{
+			printf("\n\n\tSenin skorun=%d\t\tBankanın skoru=%d\n\n\t***Kaybettiniz***\n\n\n\n\n",sonuc1Blackjack,sonuc2Blackjack);
+		}
+	
+	
+	
+	
+	
+	
+
+ getch();
+ return 0;
+ 
+}
